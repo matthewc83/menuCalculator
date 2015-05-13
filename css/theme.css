@@ -1,0 +1,88 @@
+/** general styles **/
+body {
+	padding-top: 75px;
+	background: #457B3C;
+}
+
+body .noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/** Nav Bar **/
+.navbar {
+	background: #7B0804;
+}
+
+.navbar .btn{
+	margin-top:10px;
+}
+
+.navbar .clear-btn{
+	float: right;
+}
+.navbar .total{
+	margin-top:18px;
+	color:white;
+}
+.navbar .navbar-nav li a {
+	color:#505050;
+}
+
+.navbar .navbar-brand {
+	color:#505050;
+}
+
+.icon-holder {
+	text-align: center;
+	margin-top: 5px;
+}
+.icon-bar{
+ 	background: #DB5683;
+}
+
+.list-group-item:hover{
+	cursor: pointer;
+	background: antiquewhite;
+}
+.list-group-item:active{
+	background:#CCAC86;
+}
+
+.list-group-item{
+	font-size: larger;
+	padding-right:0;
+	padding:0;
+	height:45px;
+}
+.list-group-item b{
+  background: green;
+  border-radius: 15px;
+  padding: 2px 7px;
+  color: white;
+}
+
+.list-group-item a.right-side{
+	margin-right: 0;
+}
+.list-group-item a.item-button{
+  padding: 8px 25px;
+  margin-right: 5px;
+  float: right;
+  margin-top: 7px;
+}
+
+.left-holder{
+	width: 90%;
+	float: left;
+	padding: 10px
+}
+
+.right-holder{
+	width: 10%;
+	float: right;
+}

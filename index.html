@@ -1,0 +1,63 @@
+<html ng-app="billCalculator">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<title>Malabar App</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css" />
+		<link rel="stylesheet" href="css/theme.css?v=1" />
+		
+		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+		  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	</head>
+	 <body class="container noselect" ng-controller="ItemController">
+
+	 	<nav class="navbar navbar-fixed-top">
+			<div class="container">
+				 <div class="row">
+					<div class="col-xs-8 col-xs-offset-2">
+						<div class="total text-center">
+							<h4 class="ng-cloak" >Total: <span ng-bind="getBillTotal()|currency:'£'"> </span></h4>
+						</div>
+					</div>
+					<div class="col-xs-2">
+						<a class="btn btn-danger clear-btn ng-cloak" ng-click="clearAll()">Clear</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<ul class="list-group noselect" ng-repeat="course in items">
+			<li class="list-group-item noselect ng-cloak" ng-repeat="item in course" >
+				<div class="left-holder noselect ng-cloak" ng-click="addItem(item)">
+					<span>
+						<b ng-if="item.count" class="noselect" ng-bind="item.count"></b> 
+						<span ng-bind="item.name"></span> 
+						<span ng-bind="item.price|currency:'£'"></span>
+					</span>
+				</div>
+				<div class="right-holder noselect ng-cloak">
+					<span class="right-side noselect">
+						<a class="btn noselect btn-xs btn-danger item-button" ng-click="removeItem(item)" ng-disabled="isSubtractAvailable(item)">
+							<span class="glyphicon glyphicon-minus-sign"></span>
+						</a>
+					</span>
+				</div>
+			</li>
+		</ul>
+
+		<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+		<script type="text/javascript" src="js/lodash.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/app/app.js"></script>
+		<script type="text/javascript" src="js/ie10-viewport-bug-workaround.js"></script>
+		
+	</body>
+</html>
